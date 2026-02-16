@@ -31,4 +31,14 @@ flutter:
 
   uses-material-design: true
 
+  assets:
+    - assets/icons/
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito.ttf
+        - asset: assets/fonts/Nunito-Italic.ttf
+          style: italic
+
 
