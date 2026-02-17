@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:prof26_uikit/prof26_uikit.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TestPage extends StatelessWidget {
   TestPage({super.key});
@@ -229,6 +231,67 @@ class TestPage extends StatelessWidget {
                     'Nunito Medium 11',
                     style: theme.style.nunitoMedium11.copyWith(
                       color: theme.palette.text,
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Text("CustomIconButton"),
+                  SizedBox.fromSize(
+                    size: .square(40.r),
+                    child: CustomIconButton(
+                      onPressed: () {
+                        debugPrint('Custom icon button was pressed');
+                      },
+                      child: SvgPicture.asset(
+                        'packages/prof26_uikit/assets/icons/keyboardBackspace.svg',
+                        width: 24.r,
+                        height: 24.r,
+                        colorFilter: ColorFilter.mode(
+                          theme.palette.icon,
+                          .srcIn,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Text("CustomFilledButton"),
+                  SizedBox.fromSize(
+                    size: .new(336.w, 48.h),
+                    child: CustomFilledButton.active(
+                      onPressed: () {
+                        debugPrint('Custom filled button was pressed');
+                      },
+                      theme: theme,
+                      text: 'Войти',
+                    ),
+                  ),
+                  SizedBox.fromSize(
+                    size: .new(336.w, 48.h),
+                    child: CustomFilledButton.active(
+                      onPressed: null,
+                      theme: theme,
+                      text: 'Войти',
+                    ),
+                  ),
+                  SizedBox.fromSize(
+                    size: .new(336.w, 48.h),
+                    child: CustomFilledButton.error(
+                      onPressed: () {
+                        debugPrint('Custom filled button was pressed');
+                      },
+                      theme: theme,
+                      text: 'Войти',
+                    ),
+                  ),
+                  SizedBox.fromSize(
+                    size: .new(336.w, 48.h),
+                    child: CustomFilledButton.simple(
+                      onPressed: () {
+                        debugPrint('Custom filled button was pressed');
+                      },
+                      theme: theme,
+                      text: 'Войти',
                     ),
                   ),
                 ],

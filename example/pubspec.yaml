@@ -15,6 +15,7 @@ dependencies:
     path: ../
 
   flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.3
 
 
   cupertino_icons: ^1.0.8
